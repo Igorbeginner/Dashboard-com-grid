@@ -67,7 +67,7 @@ h5 { /* títulos cards */
 
 h6{ /* títulos menu-lateral */
     font-size: 10px;
-    font-weight: 200;
+    font-weight: 400;
     color: var(--text-secondary);
 }
 
@@ -84,7 +84,7 @@ p {
     background: var(--bg-sidebar);
     padding: 5px;
     display: grid;
-    grid-template-columns: 50px 1fr;
+    grid-template-columns: 60px 1fr;
     grid-template-areas: 
     "menu-lateral container";
     gap: 5px;
@@ -95,23 +95,34 @@ p {
     width: 100%;
     height: 100%;
     background: var(--bg-page);
+    padding: 5px;
     border-radius: 16px;
     display: grid;
     grid-template-rows: 50px repeat(3, 1fr);
     grid-template-areas: 
     "logo"
     "menu"
-    "geral"
+    "general"
     "download";
     justify-items: center;
-    gap: 30px;
+    gap: 40px;
+}
+
+.menu-lateral .material-symbols-outlined{
+    font-size: 20px;
+    color: var(--text-secondary);
+}
+
+.menu-lateral .ativo{
+    color: var(--green-dark);
+}
+
+.menu-lateral .text{
+    display: none;
 }
 
 .menu-lateral .logo{
     grid-area: logo;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
 }
 
 .menu-lateral .logo>img{
@@ -124,9 +135,18 @@ height: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
 }
 
-.menu-lateral .menu .text{
+.menu-lateral .general{
+    grid-area: general;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-lateral .download{
     display: none;
 }
 
