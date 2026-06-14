@@ -42,7 +42,9 @@
 }
 /* numeros grandes dos cards */
 h1 {
-
+font-size: 32px;
+font-weight: 600;
+color: var(--text-primary);
 } 
 /* título dash */
 h2 {
@@ -62,8 +64,8 @@ h4 {
 }
 
 h5 { /* títulos cards */
-    font-size: 11px;
-    font-weight: 200;
+    font-size: 12px;
+    font-weight: 500;
     color: var(--text-secondary);
 }
 
@@ -75,7 +77,9 @@ h6{ /* títulos menu-lateral */
 
 /* detalhes cards */
 p {
-
+font-size: 10px;
+font-weight: 100;
+color: var(--green-dark);
 }
 
 /* mobile first */
@@ -301,4 +305,44 @@ top: 5px;
     background: var(--bg-card);
     border: 1px solid var(--green-dark);
     color: var(--green-dark);
+}
+
+.container .dashboard .area-menor{
+    display: grid;
+    padding: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "";
+}
+
+.container .dashboard .area-menor .card{
+    min-width: 180px;
+    min-height: 180px;
+    padding: 15px;
+    background: var(--bg-card);
+    border-radius: 16px;
+    color: var(--text-primary);
+}
+
+.container .dashboard .area-menor .card h5{
+    color: var(--text-primary);
+}
+
+.container .dashboard .area-menor .card .seta {
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--green-dark);
+    border-radius: 50%;
+    position: relative;
+    left: 130px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seta .material-symbols-outlined{
+font-size: 13px;
+color: var(--green-dark);
 }
