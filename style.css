@@ -133,11 +133,17 @@ color: var(--green-dark);
 
 .menu-lateral .logo{
     grid-area: logo;
+    width: 60px;
+    height: 60px;
     background: var(--bg-page);
+    border-radius: 16px;
     position: fixed;
+    left: 5px;
+    top: 1px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .menu-lateral .logo>h5{
@@ -318,11 +324,29 @@ top: 5px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: 
-    "";
+    "n1 n2"
+    "n3 n4";
+    gap: 5px;
+}
+
+.container .dashboard .area-menor .n1{
+    grid-area: n1;
+}
+
+.container .dashboard .area-menor .n2{
+    grid-area: n2;
+}
+
+.container .dashboard .area-menor .n3{
+    grid-area: n3;
+}
+
+.container .dashboard .area-menor .n4{
+    grid-area: n4;
 }
 
 .container .dashboard .area-menor .card{
-    width: 160px;
+    width: 180px;
     height: 130px;
     padding: 15px;
     background: var(--bg-card);
@@ -340,7 +364,7 @@ top: 5px;
     border: 1px solid var(--green-dark);
     border-radius: 50%;
     position: relative;
-    left: 110px;
+    left: 130px;
     bottom: 20px;
     display: flex;
     align-items: center;
