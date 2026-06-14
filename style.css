@@ -64,7 +64,7 @@ h4 {
 }
 
 h5 { /* títulos cards */
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     color: var(--text-secondary);
 }
@@ -75,10 +75,15 @@ h6{ /* títulos menu-lateral */
     color: var(--text-secondary);
 }
 
-/* detalhes cards */
+/* Infos cards area maior */
+h7{
+
+}
+
+/* info cards area menor */
 p {
-font-size: 10px;
-font-weight: 100;
+font-size: 9px;
+font-weight: 300;
 color: var(--green-dark);
 }
 
@@ -317,8 +322,8 @@ top: 5px;
 }
 
 .container .dashboard .area-menor .card{
-    min-width: 180px;
-    min-height: 180px;
+    width: 160px;
+    height: 130px;
     padding: 15px;
     background: var(--bg-card);
     border-radius: 16px;
@@ -335,14 +340,38 @@ top: 5px;
     border: 1px solid var(--green-dark);
     border-radius: 50%;
     position: relative;
-    left: 130px;
+    left: 110px;
     bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.seta .material-symbols-outlined{
-font-size: 13px;
+.container .dashboard .area-menor .card .material-symbols-outlined{
 color: var(--green-dark);
+font-size: 13px;
+}
+
+.container .dashboard .area-menor .card h1{
+    position: relative;
+    bottom: 20px;
+}
+
+.container .dashboard .area-menor .card .feedback {
+    width: 150px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 20px;
+}
+
+.container .dashboard .area-menor .card .feedback .anterior{
+    width: 28px;
+    height: 25px;
+    border: 1px solid var(--green-dark);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
