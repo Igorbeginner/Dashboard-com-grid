@@ -354,13 +354,26 @@ top: 5px;
     color: var(--text-primary);
 }
 
+.container .dashboard .area-menor .card.n1{
+    background-color: var(--green-dark);
+}
+
 .container .dashboard .area-menor .card h5{
     color: var(--text-primary);
+}
+
+.container .dashboard .area-menor .card.n1>h5{
+    color: var(--bg-card);
+}
+
+.container .dashboard .area-menor .card.n1>h1{
+    color: var(--bg-card);
 }
 
 .container .dashboard .area-menor .card .seta {
     width: 25px;
     height: 25px;
+    background: var(--bg-card);
     border: 1px solid var(--green-dark);
     border-radius: 50%;
     position: relative;
@@ -390,6 +403,10 @@ font-size: 13px;
     bottom: 20px;
 }
 
+.container .dashboard .area-menor .card.n1 .feedback p{
+    color: var(--green-light);
+}
+
 .container .dashboard .area-menor .card .feedback .anterior{
     width: 28px;
     height: 25px;
@@ -398,4 +415,8 @@ font-size: 13px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.container .dashboard .area-menor .card.n1 .feedback .anterior{
+border: 1px solid var(--green-light);
 }
