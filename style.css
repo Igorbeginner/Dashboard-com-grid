@@ -46,7 +46,9 @@ h1 {
 } 
 /* título dash */
 h2 {
-
+font-size: 25px;
+font-weight: 500;
+color: var(--text-primary);
 }
 
 /* outros números dos cards */
@@ -258,7 +260,45 @@ height: 30px;
 }
 
 .container .dashboard .intro{
+    padding: 10px;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    grid
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-areas: 
+    "titulo buttons"
+    "descricao descricao";
+}
+
+.container .dashboard .intro .titulo{
+grid-area: titulo;
+margin-right: 15px;
+}
+
+.container .dashboard .intro .descricao{
+grid-area: descricao;
+}
+
+.container .dashboard .intro .buttons{
+grid-area: buttons;
+position: relative;
+top: 5px;
+}
+
+.container .dashboard .intro .buttons button {
+    width: 100px;
+    height: 25px;
+    border-radius: 16px;
+    border: none;
+    font-size: 12px;
+}
+
+.container .dashboard .intro .buttons .verde{
+    background: var(--green-dark);
+    color: var(--text-light);
+}
+
+.container .dashboard .intro .buttons .branco{
+    background: var(--bg-card);
+    border: 1px solid var(--green-dark);
+    color: var(--green-dark);
 }
