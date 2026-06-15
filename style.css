@@ -449,6 +449,7 @@ border: 1px solid var(--green-light);
     "titulo"
     "grafico"
     "data";
+    gap: 10px;
 }
 
 .container .dashboard .area-maior .analytics .titulo{
@@ -456,7 +457,82 @@ border: 1px solid var(--green-light);
 }
 .container .dashboard .area-maior .analytics .grafico{
     grid-area: grafico;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-areas: 
+    "coluna1 coluna2 coluna3 coluna4 coluna5 coluna6 coluna7";
+    align-items: baseline;
+    gap: 10px;
 }
+
+.container .dashboard .area-maior .analytics .grafico .geral{
+    box-shadow: 0px 0px 10px var(--shadow-soft);
+}
+
+.coluna1{
+    grid-area: coluna1;
+    height: 80px;
+    width: 42px;
+    border-radius: 24px;
+}
+
+.coluna2{
+    grid-area: coluna2;
+    height: 100px;
+    width: 42px;
+    border-radius: 24px;
+    background: var(--green-primary);
+}
+
+.coluna3{
+    grid-area: coluna3;
+    height: 75px;
+    width: 42px;
+    border-radius: 24px;
+    background: var(--green-light);
+}
+
+.coluna4{
+    grid-area: coluna4;
+    height: 105px;
+    width: 42px;
+    border-radius: 24px;
+    background: var(--green-dark);
+}
+
+.coluna5{
+    grid-area: coluna5;
+    height: 107px;
+    width: 42px;
+    border-radius: 24px;
+}
+
+.coluna6{
+    grid-area: coluna6;
+    height: 75px;
+    width: 42px;
+    border-radius: 24px;
+}
+
+.coluna7{
+    grid-area: coluna7;
+    height: 95px;
+    width: 42px;
+    border-radius: 24px;
+}
+
+.riscado{
+    background:
+repeating-linear-gradient(
+    135deg,
+    #98a09b 0px,
+    #98a09b 3px,
+    transparent 3px,
+    transparent 10px
+);
+}
+
 .container .dashboard .area-maior .analytics .data{
     grid-area: data;
+    display: flex;
 }
