@@ -407,6 +407,10 @@ font-size: 13px;
     color: var(--green-light);
 }
 
+.container .dashboard .area-menor .card.n4 .feedback span {
+    color: var(--bg-card);
+}
+
 .container .dashboard .area-menor .card .feedback .anterior{
     width: 28px;
     height: 25px;
@@ -415,6 +419,11 @@ font-size: 13px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.container .dashboard .area-menor .card.n4 .feedback .anterior{
+    color: var(--green-light);
+    border: 1px solid var(--bg-card);
 }
 
 .container .dashboard .area-menor .card.n1 .feedback .anterior{
