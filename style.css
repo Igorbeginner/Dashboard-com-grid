@@ -66,7 +66,7 @@ h4 {
 h5 { /* títulos cards */
     font-size: 14px;
     font-weight: 500;
-    color: var(--text-secondary);
+    color: var(--text-primary   );
 }
 
 h6{ /* títulos menu-lateral */
@@ -428,4 +428,35 @@ font-size: 13px;
 
 .container .dashboard .area-menor .card.n1 .feedback .anterior{
 border: 1px solid var(--green-light);
+}
+
+/* Area maior */
+
+.container .dashboard .area-maior{
+    padding: 10px;
+    display: grid;
+}
+
+/* grafico semana */
+
+.container .dashboard .area-maior .analytics{
+    grid-area: analytics;
+    background: var(--bg-card);
+    padding: 10px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "titulo"
+    "grafico"
+    "data";
+}
+
+.container .dashboard .area-maior .analytics .titulo{
+    grid-area: titulo;
+}
+.container .dashboard .area-maior .analytics .grafico{
+    grid-area: grafico;
+}
+.container .dashboard .area-maior .analytics .data{
+    grid-area: data;
 }
