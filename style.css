@@ -275,7 +275,7 @@ height: 30px;
     background: var(--bg-page);
     border-radius: 16px;
     display: grid;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: 70px 290px 1fr;
     grid-template-areas:
     "intro"
     "menor"
@@ -291,6 +291,7 @@ height: 30px;
     grid-template-areas: 
     "titulo buttons"
     "descricao descricao";
+    /* border:1px solid blue; */
 }
 
 .container .dashboard .intro .titulo{
@@ -337,6 +338,7 @@ top: 5px;
     "n1 n2"
     "n3 n4";
     gap: 5px;
+/* border: 1px solid red; */
 }
 
 .container .dashboard .area-menor .n1{
@@ -601,4 +603,21 @@ gap: 10px;
     color: var(--bg-card);
     position: relative;
     top: 2px;
+}
+
+.container .dashboard .area-maior .time{
+    grid-area: time;
+    height: 200px;
+    background-image: url(img/background-time.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px;
+    border-radius: 16px;
+}
+
+
+
+.container .dashboard .area-maior .time .titulo h5{
+    color: var(--bg-card);
 }
