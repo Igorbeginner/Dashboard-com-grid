@@ -60,7 +60,9 @@ h3 {
 
 /* meeting card */
 h4 {
-
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--green-dark);
 }
 
 h5 { /* títulos cards */
@@ -272,9 +274,16 @@ height: 30px;
     grid-area: dashboard;
     background: var(--bg-page);
     border-radius: 16px;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+    "intro"
+    "menor"
+    "maior";
 }
 
 .container .dashboard .intro{
+    grid-area: intro;
     padding: 10px;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
@@ -319,6 +328,7 @@ top: 5px;
 }
 
 .container .dashboard .area-menor{
+    grid-area: menor;
     display: grid;
     padding: 10px;
     grid-template-columns: repeat(2, 1fr);
@@ -433,8 +443,18 @@ border: 1px solid var(--green-light);
 /* Area maior */
 
 .container .dashboard .area-maior{
+    grid-area: maior;
     padding: 10px;
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 
+    "analytics analytics"
+    "reminder project"
+    "time project"
+    "progress progress"
+    "team team";
+    gap: 10px;
 }
 
 /* grafico semana */
@@ -544,4 +564,41 @@ repeating-linear-gradient(
 
 .container .dashboard .area-maior .analytics .data h5{
     color: var(--text-light);
+}
+
+.container .dashboard .area-maior .reminder{
+grid-area: reminder;
+background: var(--bg-card);
+padding: 10px;
+border-radius: 16px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.container .dashboard .area-maior .reminder .corpo p{
+    font-size: 12px;
+    color: var(--green-light);
+}
+
+.container .dashboard .area-maior .reminder .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .dashboard .area-maior .reminder .button button{
+    width: 160px;
+    height: 30px;
+    border-radius: 16px;
+    border: none;
+    background: var(--green-dark);
+    color: var(--bg-card);
+}
+
+.container .dashboard .area-maior .reminder .button span {
+    font-size: 14px;
+    color: var(--bg-card);
+    position: relative;
+    top: 2px;
 }
