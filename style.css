@@ -443,17 +443,19 @@ border: 1px solid var(--green-light);
     grid-area: analytics;
     background: var(--bg-card);
     padding: 10px;
+    border-radius: 16px;
     display: grid;
     grid-template-rows: auto auto auto;
     grid-template-areas: 
     "titulo"
     "grafico"
     "data";
-    gap: 10px;
+    gap: 3px;
 }
 
 .container .dashboard .area-maior .analytics .titulo{
     grid-area: titulo;
+    margin-bottom: 7px;
 }
 .container .dashboard .area-maior .analytics .grafico{
     grid-area: grafico;
@@ -534,5 +536,12 @@ repeating-linear-gradient(
 
 .container .dashboard .area-maior .analytics .data{
     grid-area: data;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(7, 42px);
+    justify-items: center;
+    gap: 10px;
+}
+
+.container .dashboard .area-maior .analytics .data h5{
+    color: var(--text-light);
 }
