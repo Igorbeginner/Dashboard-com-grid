@@ -614,10 +614,59 @@ gap: 10px;
     background-repeat: no-repeat;
     padding: 10px;
     border-radius: 16px;
+    display: grid;
+    grid-template-rows: 20px 100px 40px;
+    grid-template-areas: 
+    "titulo"
+    "cronometro"
+    "buttons";
 }
 
-
+.container .dashboard .area-maior .time .titulo{
+    grid-area: titulo;
+}
 
 .container .dashboard .area-maior .time .titulo h5{
     color: var(--bg-card);
+}
+
+.container .dashboard .area-maior .time .cronometro{
+    grid-area: cronometro;
+}
+
+.container .dashboard .area-maior .time .buttons{
+    grid-area: buttons;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.container .dashboard .area-maior .time .buttons button{
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.container .dashboard .area-maior .time .buttons .branco .pause{
+    width: 6px;
+    height: 17px;
+    background: var(--green-dark);
+    border-radius: 2px;
+}
+
+.container .dashboard .area-maior .time .buttons .vermelho{
+    background: red;
+}
+
+.container .dashboard .area-maior .time .buttons .vermelho .stop{
+    width: 17px;
+    height: 17px;
+    background: var(--bg-card);
+    border-radius: 3px;
 }
