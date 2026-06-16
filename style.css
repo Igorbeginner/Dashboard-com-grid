@@ -1063,4 +1063,51 @@ justify-items: center;
     height: 18px;
 }
 
+.container .dashboard .area-maior .analytics .grafico{
+    justify-items: center;
+}
+
+.container .dashboard .area-maior .analytics .grafico .geral{
+    width: 45px;
+}
+
+.coluna1{
+    height: 110px;
+}
+
+.coluna2{
+    height: 130px;
+}
+
+.coluna3{
+    height: 105px;
+}
+
+.coluna4{
+    height: 135px;
+}
+.coluna5{
+    height: 137px;
+}
+.coluna6{
+    height: 105px;
+}
+.coluna7{
+    height: 125px;
+}
+
+.container .dashboard .area-maior .analytics .data{
+    justify-content: space-around;
+}
+
+.container .dashboard .area-maior .time{
+    height: 180px;
+    gap: 20px;
+}
+
+.container .dashboard .area-maior .time h3{
+    font-size: 30px;
+}
+
+
 }
