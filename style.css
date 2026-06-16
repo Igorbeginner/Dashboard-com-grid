@@ -1109,5 +1109,14 @@ justify-items: center;
     font-size: 30px;
 }
 
+.container .dashboard .area-maior .project .button button{
+    left: 90px;
+}
+
+.container .dashboard .area-maior .project .info .card{
+    margin-bottom: 5px;
+}
+
+
 
 }
