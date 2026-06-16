@@ -1022,6 +1022,10 @@ font-weight: 300;
 color: var(--green-dark);
 }
 
+.container .dashboard{
+    gap: 10px;
+}
+
 .container .dashboard .intro .buttons{
     left: 135px;
 }
