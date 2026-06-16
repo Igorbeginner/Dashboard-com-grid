@@ -1117,6 +1117,8 @@ justify-items: center;
     margin-bottom: 5px;
 }
 
-
+.container .dashboard .area-maior .team .button button{
+    left: 215px;
+}
 
 }
