@@ -335,7 +335,7 @@ top: 5px;
 .container .dashboard .area-menor{
     grid-area: menor;
     display: grid;
-    padding: 10px;
+    padding: 10px 10px 0px 10px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: 
@@ -423,6 +423,10 @@ font-size: 13px;
     color: var(--green-light);
 }
 
+.container .dashboard .area-menor .card.n1 .feedback span {
+    color: var(--green-light);
+}
+
 .container .dashboard .area-menor .card.n4 .feedback span {
     color: var(--bg-card);
 }
@@ -450,7 +454,8 @@ border: 1px solid var(--green-light);
 
 .container .dashboard .area-maior{
     grid-area: maior;
-    padding: 10px;
+    padding: 0px 10px 10px 10px;
+    margin: none;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(5, auto);
@@ -738,12 +743,92 @@ gap: 10px;
     top: 4px;
 }
 
-.container .dashboard .area-maior .progress{
+.container .dashboard .area-maior .progress {
     grid-area: progress;
-    height: 200px;
     padding: 20px 10px 10px 10px;
     background: var(--bg-card);
     border-radius: 16px;
+    display: grid;
+    grid-template-rows: 30px 160px 35px;
+    grid-template-areas:
+        "titulo"
+        "grafico"
+        "legenda";
+}
+
+.container .dashboard .area-maior .progress .titulo {
+    grid-area: titulo;
+}
+
+.container .dashboard .area-maior .progress .grafico {
+    grid-area: grafico;
+    position: relative;
+    bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#progressChart {
+    width: 260px;
+    height: 160px;
+}
+
+.progress-text {
+    position: absolute;
+    top: 78px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.progress-text h2 {
+    font-size: 42px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.progress-text p {
+    font-size: 12px;
+    color: var(--green-dark);
+}
+
+.container .dashboard .area-maior .progress .legenda {
+    grid-area: legenda;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container .dashboard .area-maior .progress .legenda > div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.container .dashboard .area-maior .progress .legenda .ex {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.container .dashboard .area-maior .progress .legenda .completed .ex {
+    background: var(--green-primary);
+}
+
+.container .dashboard .area-maior .progress .legenda .in-progress .ex {
+    background: var(--green-dark);
+}
+
+.container .dashboard .area-maior .progress .legenda .pending .ex {
+    background:
+        repeating-linear-gradient(
+            135deg,
+            transparent 0px,
+            transparent 3px,
+            #8f9d96 3px,
+            #8f9d96 5px
+        );
 }
 
 .container .dashboard .area-maior .team{

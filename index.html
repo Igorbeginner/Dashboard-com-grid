@@ -269,9 +269,26 @@
                             <h5>Project Progress</h5>
                         </div>
                         <div class="grafico">
-
+                            <canvas id="progressChart"></canvas>
+                            <div class="progress-text">
+                                <h2>41%</h2>
+                                <p>Project Ended</p>
+                            </div>
                         </div>
-                        <div class="legenda"></div>
+                        <div class="legenda">
+                            <div class="completed">
+                                <div class="ex"></div>
+                                <p>Completed</p>
+                            </div>
+                            <div class="in-progress">
+                                <div class="ex"></div>
+                                <p>In Progress</p>
+                            </div>
+                            <div class="pending">
+                                <div class="ex"></div>
+                                <p>Pending</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="team">
                         <div class="titulo">
@@ -335,5 +352,6 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
