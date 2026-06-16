@@ -266,7 +266,7 @@ height: 30px;
     align-items: center;
 }
 
-.container .cabecalho .usuario .perfil>img{
+.container .cabecalho .usuario .perfil img{
     width: 32px;
     height: 32px;
     position: relative;
@@ -1235,5 +1235,33 @@ height: 32px;
     color: var(--bg-card);
 }
 
+.container .cabecalho .usuario .perfil{
+    width: auto;
+    height: auto;
+    background: none;
+    box-shadow: none;
+    gap: 10px;
+}
+
+.container .cabecalho .usuario .perfil .rosa{
+        width: 40px;
+    height: 40px;
+    background: radial-gradient(white, pink);
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px var(--shadow-soft);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .cabecalho .usuario .perfil .text{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.container .cabecalho .usuario .perfil .text h5{
+    font-size: 12px;
+}
 
 }
