@@ -68,7 +68,7 @@ h4 {
 }
 
 h5 { /* títulos cards */
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     color: var(--text-primary   );
 }
@@ -740,3 +740,45 @@ gap: 10px;
     top: 4px;
 }
 
+.container .dashboard .area-maior .progress{
+    grid-area: progress;
+    height: 200px;
+    padding: 20px 10px 10px 10px;
+    background: var(--bg-card);
+    border-radius: 16px;
+}
+
+.container .dashboard .area-maior .team{
+    grid-area: team;
+    padding: 20px 10px 10px 10px;
+    background: var(--bg-card);
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "titulo button"
+    "members members";
+}
+
+.container .dashboard .area-maior .team .titulo{
+    grid-area: titulo;
+}
+
+.container .dashboard .area-maior .team .button{
+    grid-area: button;
+}
+
+.container .dashboard .area-maior .team .button button{
+    width: 110px;
+    height: 30px;
+    background: var(--bg-card);
+    border: 1px solid var(--green-dark);
+    border-radius: 16px;
+    color: var(--green-dark);
+    position: relative;
+    left: 60px;
+}
+
+.container .dashboard .area-maior .team .members{
+    grid-area: members;
+}
