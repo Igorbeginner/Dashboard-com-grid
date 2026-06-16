@@ -289,6 +289,7 @@ height: 30px;
 .container .dashboard .intro{
     grid-area: intro;
     padding: 10px;
+    margin-left: 15px;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     /* grid-template-columns: repeat(2, 1fr); */
@@ -300,7 +301,6 @@ height: 30px;
 
 .container .dashboard .intro .titulo{
 grid-area: titulo;
-margin-right: 15px;
 }
 
 .container .dashboard .intro .descricao{
@@ -442,8 +442,7 @@ font-size: 13px;
 }
 
 .container .dashboard .area-menor .card.n4 .feedback .anterior{
-    color: var(--green-light);
-    border: 1px solid var(--bg-card);
+    display: none;
 }
 
 .container .dashboard .area-menor .card.n1 .feedback .anterior{
@@ -960,4 +959,104 @@ gap: 10px;
 
 .container .dashboard .area-maior .team .members .card .status.pending p{
     color: red;
+}
+
+
+
+
+
+
+/* Versão tablete */
+
+@media (min-width:768px){
+
+    h1 {
+font-size: 32px;
+font-weight: 600;
+color: var(--text-primary);
+} 
+/* título dash */
+h2 {
+font-size: 28px;
+font-weight: 500;
+color: var(--text-primary);
+}
+
+/* outros números dos cards */
+h3 {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--bg-card);
+}
+
+/* meeting card */
+h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--green-dark);
+}
+
+h5 { /* títulos cards */
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-primary   );
+}
+
+h6{ /* títulos menu-lateral */
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+
+/* Infos cards area maior */
+h7{
+    font-size:10px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* info cards area menor */
+p {
+font-size: 9px;
+font-weight: 300;
+color: var(--green-dark);
+}
+
+.container .dashboard .intro .buttons{
+    left: 135px;
+}
+
+.container .dashboard .intro .buttons button{
+width: 110px;
+height: 30px;
+font-size: 13px;
+}
+
+.container .dashboard .area-menor{
+gap: 10px;
+align-items: center;
+justify-items: center;
+}
+
+.container .dashboard .area-menor .card{
+    width: 330px;
+}
+
+.container .dashboard .area-menor .card .seta{
+    left: 280px;
+}
+
+.container .dashboard .area-menor .card .feedback{
+    width: 200px;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.container .dashboard .area-menor .card .feedback .anterior{
+    width: 30px;
+    height: 18px;
+}
+
 }
