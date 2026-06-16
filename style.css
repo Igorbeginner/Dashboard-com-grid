@@ -760,6 +760,19 @@ gap: 10px;
     "members members";
 }
 
+.container .dashboard .area-maior .team h7{
+    font-size: 14px;
+}
+
+.container .dashboard .area-maior .team p{
+    color: var(--text-secondary);
+}
+
+.container .dashboard .area-maior .team strong{
+    color: var(--text-primary);
+    font-weight: 600
+}
+
 .container .dashboard .area-maior .team .titulo{
     grid-area: titulo;
 }
@@ -781,4 +794,55 @@ gap: 10px;
 
 .container .dashboard .area-maior .team .members{
     grid-area: members;
+}
+
+.container .dashboard .area-maior .team .members .card{
+    display: grid;
+    grid-template-columns: 40px 1fr 70px;
+    grid-template-areas: 
+    "imagem info status";
+    gap: 10px;
+}
+
+.container .dashboard .area-maior .team .members .card .imagem{
+    grid-area: imagem;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(white, pink);
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px var(--shadow-soft);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .dashboard .area-maior .team .members .card .imagem img{
+    width: 32px;
+    height: 32px;
+    position: relative;
+    bottom: 2px;
+    left: 1px;
+}
+
+.container .dashboard .area-maior .team .members .card .info{
+    grid-area: info;
+}
+
+.container .dashboard .area-maior .team .members .card .status{
+    grid-area: status;
+    width: 70px;
+    height: 15px;
+    color: var(--green-dark);
+    background: rgba(0, 255, 8, 0.08);
+    border: 1px solid var(--green-light);
+    border-radius: 4px;
+    position: relative;
+    bottom: -25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .dashboard .area-maior .team .members .card .status p{
+    color: var(--green-light);
 }
