@@ -55,7 +55,9 @@ color: var(--text-primary);
 
 /* outros números dos cards */
 h3 {
-    
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--bg-card);
 }
 
 /* meeting card */
@@ -79,8 +81,8 @@ h6{ /* títulos menu-lateral */
 
 /* Infos cards area maior */
 h7{
-    font-size:11px;
-    font-weight: 400;
+    font-size:10px;
+    font-weight: 500;
     color: var(--text-primary);
 }
 
@@ -708,17 +710,20 @@ gap: 10px;
 }
 
 .container .dashboard .area-maior .project .info .card{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     display: grid;
     grid-template-columns: 32px 1fr;
     grid-template-areas: "icone texto";
-}
+    justify-items: start;
+    align-items: center;
+}    
 
 .container .dashboard .area-maior .project .info .card .texto{
     grid-area: texto;
     height: 40px;
+}
+
+.container .dashboard .area-maior .project .info .card .texto p{
+    color: var(--text-light);
 }
 
 .container .dashboard .area-maior .project .info .card .icone{
@@ -726,8 +731,8 @@ gap: 10px;
 }
 
 .container .dashboard .area-maior .project .info .card .icone img{
-    width: 32px;
-    height: 32px;
+    width: 20px;
+    height: 20px;
     position: relative;
     top: 4px;
 }
