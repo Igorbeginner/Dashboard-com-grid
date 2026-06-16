@@ -758,6 +758,7 @@ gap: 10px;
     grid-template-areas: 
     "titulo button"
     "members members";
+    gap: 10px;
 }
 
 .container .dashboard .area-maior .team h7{
@@ -790,6 +791,7 @@ gap: 10px;
     color: var(--green-dark);
     position: relative;
     left: 60px;
+    bottom: 2px;
 }
 
 .container .dashboard .area-maior .team .members{
@@ -798,6 +800,7 @@ gap: 10px;
 
 .container .dashboard .area-maior .team .members .card{
     display: grid;
+    padding-bottom: 5px;
     grid-template-columns: 40px 1fr 70px;
     grid-template-areas: 
     "imagem info status";
@@ -808,12 +811,23 @@ gap: 10px;
     grid-area: imagem;
     width: 40px;
     height: 40px;
-    background: radial-gradient(white, pink);
+    background: pink;
     border-radius: 50%;
     box-shadow: 0px 0px 5px var(--shadow-soft);
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.container .dashboard .area-maior .team .members .card .imagem.verde{
+    background: #D3F6AE;
+}
+
+.container .dashboard .area-maior .team .members .card .imagem.azul{
+    background: #B0B6F4;
+}
+.container .dashboard .area-maior .team .members .card .imagem.amarelo{
+    background: #F4DEB1;
 }
 
 .container .dashboard .area-maior .team .members .card .imagem img{
@@ -830,7 +844,7 @@ gap: 10px;
 
 .container .dashboard .area-maior .team .members .card .status{
     grid-area: status;
-    width: 70px;
+    width: auto;
     height: 15px;
     color: var(--green-dark);
     background: rgba(0, 255, 8, 0.08);
@@ -845,4 +859,22 @@ gap: 10px;
 
 .container .dashboard .area-maior .team .members .card .status p{
     color: var(--green-light);
+}
+
+.container .dashboard .area-maior .team .members .card .status.in{
+    background: rgba(255, 255, 0, 0.08);
+    border: 1px solid rgb(178, 178, 0);
+}
+
+.container .dashboard .area-maior .team .members .card .status.in p{
+    color: rgb(178, 178, 0);
+}
+
+.container .dashboard .area-maior .team .members .card .status.pending{
+    background: rgba(255, 0, 0, 0.08);
+    border: 1px solid red;
+}
+
+.container .dashboard .area-maior .team .members .card .status.pending p{
+    color: red;
 }
