@@ -68,7 +68,7 @@ h4 {
 }
 
 h5 { /* títulos cards */
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     color: var(--text-primary   );
 }
@@ -119,7 +119,7 @@ color: var(--green-dark);
     padding: 10px;
     border-radius: 16px;
     display: grid;
-    grid-template-rows: 50px repeat(3, 1fr);
+    grid-template-rows: 50px 180px 180px;
     grid-template-areas: 
     "logo"
     "menu"
@@ -323,7 +323,7 @@ top: 5px;
 
 .container .dashboard .intro .buttons .verde{
     background: var(--green-dark);
-    color: var(--text-light);
+    color: var(--bg-card);
 }
 
 .container .dashboard .intro .buttons .branco{
@@ -364,7 +364,7 @@ top: 5px;
 .container .dashboard .area-menor .card{
     width: 180px;
     height: 130px;
-    padding: 15px;
+    padding: 20px 10px 10px 10px;
     background: var(--bg-card);
     border-radius: 16px;
     color: var(--text-primary);
@@ -393,8 +393,8 @@ top: 5px;
     border: 1px solid var(--green-dark);
     border-radius: 50%;
     position: relative;
-    left: 130px;
-    bottom: 20px;
+    left: 133px;
+    bottom: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -468,7 +468,7 @@ border: 1px solid var(--green-light);
 .container .dashboard .area-maior .analytics{
     grid-area: analytics;
     background: var(--bg-card);
-    padding: 10px;
+    padding: 20px 10px 10px 10px;
     border-radius: 16px;
     display: grid;
     grid-template-rows: auto auto auto;
@@ -495,19 +495,18 @@ border: 1px solid var(--green-light);
 
 .container .dashboard .area-maior .analytics .grafico .geral{
     box-shadow: 0px 0px 10px var(--shadow-soft);
+    width: 35px;
 }
 
 .coluna1{
     grid-area: coluna1;
     height: 80px;
-    width: 42px;
     border-radius: 24px;
 }
 
 .coluna2{
     grid-area: coluna2;
     height: 100px;
-    width: 42px;
     border-radius: 24px;
     background: var(--green-primary);
 }
@@ -515,7 +514,6 @@ border: 1px solid var(--green-light);
 .coluna3{
     grid-area: coluna3;
     height: 75px;
-    width: 42px;
     border-radius: 24px;
     background: var(--green-light);
 }
@@ -523,7 +521,6 @@ border: 1px solid var(--green-light);
 .coluna4{
     grid-area: coluna4;
     height: 105px;
-    width: 42px;
     border-radius: 24px;
     background: var(--green-dark);
 }
@@ -531,39 +528,37 @@ border: 1px solid var(--green-light);
 .coluna5{
     grid-area: coluna5;
     height: 107px;
-    width: 42px;
     border-radius: 24px;
 }
 
 .coluna6{
     grid-area: coluna6;
     height: 75px;
-    width: 42px;
     border-radius: 24px;
 }
 
 .coluna7{
     grid-area: coluna7;
     height: 95px;
-    width: 42px;
     border-radius: 24px;
 }
 
 .riscado{
     background:
-repeating-linear-gradient(
-    135deg,
-    #98a09b 0px,
-    #98a09b 3px,
-    transparent 3px,
-    transparent 10px
-);
+        repeating-linear-gradient(
+            135deg,
+            transparent 0px,
+            transparent 4px,
+            #9ba9a1 4px,
+            #9ba9a1 8px
+        );
 }
 
 .container .dashboard .area-maior .analytics .data{
     grid-area: data;
     display: grid;
-    grid-template-columns: repeat(7, 42px);
+    grid-template-columns: repeat(7, 40px);
+    align-items: center;
     justify-items: center;
     gap: 10px;
 }
@@ -575,7 +570,7 @@ repeating-linear-gradient(
 .container .dashboard .area-maior .reminder{
 grid-area: reminder;
 background: var(--bg-card);
-padding: 10px;
+    padding: 20px 10px 10px 10px;
 border-radius: 16px;
 display: flex;
 flex-direction: column;
@@ -682,7 +677,7 @@ gap: 10px;
     grid-area: project;
     background: var(--bg-card);
     border-radius: 16px;
-    padding: 10px;
+    padding: 20px 10px 10px 10px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 40px 1fr;
@@ -706,6 +701,9 @@ gap: 10px;
     border: 1px solid var(--green-dark);
     color: var(--green-dark);
     background: var(--bg-card);
+    position: relative;
+    bottom: 5px;
+    left: 20px;
 }
 
 .container .dashboard .area-maior .project .info{
