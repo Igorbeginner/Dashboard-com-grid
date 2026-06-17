@@ -368,6 +368,15 @@ align-items: center;
     background: var(--bg-card);
     border-radius: 16px;
     color: var(--text-primary);
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    grid-template-rows: 20px 40px 30px;
+    grid-template-areas: 
+    "titulo seta"
+    "h1 h1"
+    "feedback feedback";
+    gap: 10px;
+    align-items: center;
 }
 
 .container .dashboard .area-menor .card.n1{
@@ -375,6 +384,7 @@ align-items: center;
 }
 
 .container .dashboard .area-menor .card h5{
+    grid-area: titulo;
     color: var(--text-primary);
 }
 
@@ -382,19 +392,22 @@ align-items: center;
     color: var(--bg-card);
 }
 
+.container .dashboard .area-menor .card h1{
+    grid-area: h1;
+    display: flex;
+}
+
 .container .dashboard .area-menor .card.n1>h1{
     color: var(--bg-card);
 }
 
 .container .dashboard .area-menor .card .seta {
+    grid-area: seta;
     width: 25px;
     height: 25px;
     background: var(--bg-card);
     border: 1px solid var(--green-dark);
     border-radius: 50%;
-    position: relative;
-    left: 133px;
-    bottom: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -405,18 +418,14 @@ color: var(--green-dark);
 font-size: 13px;
 }
 
-.container .dashboard .area-menor .card h1{
-    position: relative;
-    bottom: 20px;
-}
-
 .container .dashboard .area-menor .card .feedback {
+    grid-area: feedback;
     width: 150px;
     height: 30px;
+    padding-left: 5x;
     display: flex;
     flex-direction: column;
-    position: relative;
-    bottom: 20px;
+    justify-content: flex-end;
 }
 
 .container .dashboard .area-menor .card.n1 .feedback p{
@@ -1302,6 +1311,17 @@ height: 32px;
     height: 46px;
     border-radius: 32px;
     font-size: 16px;
+}
+
+.container .dashboard .area-menor{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: none;
+    grid-template-areas: "n1 n2 n3 n4";
+}
+
+.container .dashboard .area-menor .card{
+    width: 100%;
+    height: 180px;
 }
 
 }
