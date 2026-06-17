@@ -289,14 +289,12 @@ height: 30px;
 .container .dashboard .intro{
     grid-area: intro;
     padding: 10px;
-    margin-left: 15px;
     display: grid;
+    grid-template-columns: 1fr 205px;
     grid-template-rows: repeat(2, 1fr);
-    /* grid-template-columns: repeat(2, 1fr); */
     grid-template-areas: 
     "titulo buttons"
     "descricao descricao";
-    /* border:1px solid blue; */
 }
 
 .container .dashboard .intro .titulo{
@@ -309,8 +307,10 @@ grid-area: descricao;
 
 .container .dashboard .intro .buttons{
 grid-area: buttons;
-position: relative;
-top: 5px;
+gap: 5px;
+display:flex;
+justify-content: center;
+align-items: center;
 }
 
 .container .dashboard .intro .buttons button {
@@ -475,11 +475,10 @@ border: 1px solid var(--green-light);
     padding: 20px 10px 10px 10px;
     border-radius: 16px;
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto;
     grid-template-areas: 
     "titulo"
-    "grafico"
-    "data";
+    "grafico";
     gap: 3px;
 }
 
@@ -491,15 +490,18 @@ border: 1px solid var(--green-light);
     grid-area: grafico;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr 20px;
     grid-template-areas: 
-    "coluna1 coluna2 coluna3 coluna4 coluna5 coluna6 coluna7";
+    "coluna1 coluna2 coluna3 coluna4 coluna5 coluna6 coluna7"
+    "s m t w t2 f s2";
     align-items: baseline;
-    gap: 10px;
+    justify-items: center;
+    gap: 5px;
 }
 
 .container .dashboard .area-maior .analytics .grafico .geral{
     box-shadow: 0px 0px 10px var(--shadow-soft);
-    width: 35px;
+    width: 40px;
 }
 
 .coluna1{
@@ -558,18 +560,38 @@ border: 1px solid var(--green-light);
         );
 }
 
-.container .dashboard .area-maior .analytics .data{
-    grid-area: data;
-    display: grid;
-    grid-template-columns: repeat(7, 40px);
-    align-items: center;
-    justify-items: center;
-    gap: 10px;
-}
-
-.container .dashboard .area-maior .analytics .data h5{
+.container .dashboard .area-maior .analytics .grafico h5{
     color: var(--text-light);
 }
+
+.container .dashboard .area-maior .analytics .grafico .s{
+    grid-area: s;
+}
+
+.container .dashboard .area-maior .analytics .grafico .m{
+    grid-area: m;
+}
+
+.container .dashboard .area-maior .analytics .grafico .t{
+    grid-area: t;
+}
+
+.container .dashboard .area-maior .analytics .grafico .w{
+    grid-area: w;
+}
+
+.container .dashboard .area-maior .analytics .grafico .t2{
+    grid-area: t2;
+}
+
+.container .dashboard .area-maior .analytics .grafico .f{
+    grid-area: f;
+}
+
+.container .dashboard .area-maior .analytics .grafico .s2{
+    grid-area: s2;
+}
+
 
 .container .dashboard .area-maior .reminder{
 grid-area: reminder;
@@ -1026,10 +1048,6 @@ color: var(--green-dark);
     gap: 10px;
 }
 
-.container .dashboard .intro .buttons{
-    left: 135px;
-}
-
 .container .dashboard .intro .buttons button{
 width: 110px;
 height: 30px;
@@ -1056,7 +1074,6 @@ justify-items: center;
     align-items: center;
     gap: 5px;
 }
-
 
 .container .dashboard .area-menor .card .feedback .anterior{
     width: 30px;
