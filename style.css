@@ -1285,4 +1285,23 @@ height: 32px;
     color: var(--text-secondary);
 }
 
+.container .dashboard .intro{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "titulo titulo buttons"
+    "descricao descricao buttons";
+}
+
+.container .dashboard .intro .buttons{
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.container .dashboard .intro .buttons button{
+    width: 180px;
+    height: 46px;
+    border-radius: 32px;
+    font-size: 16px;
+}
+
 }
