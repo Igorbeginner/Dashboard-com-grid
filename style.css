@@ -342,7 +342,6 @@ align-items: center;
     "n1 n2"
     "n3 n4";
     gap: 5px;
-/* border: 1px solid red; */
 }
 
 .container .dashboard .area-menor .n1{
@@ -362,9 +361,9 @@ align-items: center;
 }
 
 .container .dashboard .area-menor .card{
-    width: 180px;
+    width: 100%;
     height: 130px;
-    padding: 20px 10px 10px 10px;
+    padding: 10px;
     background: var(--bg-card);
     border-radius: 16px;
     color: var(--text-primary);
@@ -422,10 +421,10 @@ font-size: 13px;
     grid-area: feedback;
     width: 150px;
     height: 30px;
-    padding-left: 5x;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: flex-start;
 }
 
 .container .dashboard .area-menor .card.n1 .feedback p{
@@ -1069,10 +1068,6 @@ align-items: center;
 justify-items: center;
 }
 
-.container .dashboard .area-menor .card{
-    width: 330px;
-}
-
 .container .dashboard .area-menor .card .seta{
     left: 280px;
 }
@@ -1081,6 +1076,7 @@ justify-items: center;
     width: 200px;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
     gap: 5px;
 }
 
@@ -1294,6 +1290,10 @@ height: 32px;
     color: var(--text-secondary);
 }
 
+.container .dashboard{
+    grid-template-rows: 70px auto 1fr;
+}
+
 .container .dashboard .intro{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
@@ -1314,14 +1314,43 @@ height: 32px;
 }
 
 .container .dashboard .area-menor{
+    padding: 0px 10px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: none;
     grid-template-areas: "n1 n2 n3 n4";
 }
 
 .container .dashboard .area-menor .card{
-    width: 100%;
     height: 180px;
 }
 
+.container .dashboard .area-menor .card{
+    height: 140px;
+    grid-template-rows: 40px 30px 30px;
+}
+
+.container .dashboard .area-menor .card h1{
+    align-items: flex-end;
+}
+
+.container .dashboard .area-menor .card .feedback{
+    align-items: flex-end;
+}
+
+/* 5 linhas */
+.container .dashboard .area-maior{
+    grid-area: maior;
+    padding: 0px 10px;
+    margin: none;
+    display: grid;
+    grid-template-columns: 1fr 0.75fr 0.25fr 1fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 
+    "analytics analytics analytics reminder project"
+    "analytics analytics analytics reminder project"
+    "team team progress progress project"
+    "team team progress progress time"
+    "team team progress progress time";
+    gap: 10px;
+}
 }
