@@ -1409,3 +1409,27 @@ height: 32px;
 }
 
 }
+
+
+
+
+/*  Pequenas adaptações para celulr */
+@media (min-width:320px) and (max-width:768px){
+
+    .container .dashboard .area-maior{
+        grid-template-areas: 
+    "analytics analytics"
+    "progress progress"
+    "project project"
+    "project project"
+    "team team";
+    }
+
+    .container .dashboard .area-maior .reminder{
+        display: none;
+    }
+
+    .container .dashboard .area-maior .time{
+        display: none;
+    }
+}
